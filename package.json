@@ -1,0 +1,22 @@
+{
+  "name": "geo-news-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "US/Iran/Dubai geopolitics news → Chinese summary → Telegram (Cloudflare Workers + Workers AI)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "db:migrate:local": "wrangler d1 migrations apply geo-news-bot --local",
+    "db:migrate:remote": "wrangler d1 migrations apply geo-news-bot --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261103.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.157.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
+  }
+}
